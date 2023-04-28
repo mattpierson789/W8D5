@@ -106,6 +106,30 @@ Board.prototype.isOccupied = function (pos) {
  * Returns empty array if no pieces of the opposite color are found.
  */
 Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
+
+  const [x, y] = pos;
+  const dx = dir[0];
+  const dy = dir[1];
+  const newPos = [x + dx, y + dy];
+
+  while { 
+
+  if (!this.isValidPos(newPos)) {
+    return [];
+  } else if (!this.isOccupied(newPos)) {
+    return [];
+
+} else if (!this.isMine(newPos)) {
+
+  return [];
+} else {
+
+piecesToFlip.push(newPos)
+
+}
+  
+return piecesToFlip
+
 };
 
 /**
@@ -114,7 +138,10 @@ Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
  * color being flipped.
  */
 Board.prototype.validMove = function (pos, color) {
-};
+
+
+
+}
 
 /**
  * Adds a new piece of the given color to the given position, flipping the
