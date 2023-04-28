@@ -35,7 +35,14 @@ Piece.prototype.flip = function () {
  */
 Piece.prototype.toString = function () {
 
+    if (this.color === "black") { 
+        return "B"
+    }
 
+    if (this.color === "white"){
+        return "W"
+
+}
 
 };
 
